@@ -2,6 +2,7 @@
 Hi, please run
 
 yarn install
+
 yarn start
 
 And go to http://localhost:3000
