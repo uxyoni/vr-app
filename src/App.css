@@ -1,0 +1,77 @@
+.App {
+  font-size: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.TableWrapper {
+  height: 500px;
+  overflow-y: scroll;
+  overflow-anchor: none;
+  position: relative;
+}
+
+.GridTableRow {
+  display: grid;
+  box-sizing: border-box;
+  grid-template-columns: 40px calc(20% - 20px) calc(10% - 10px) calc(30% - 30px) calc(20% - 20px) calc(20% - 20px) 60px;
+  justify-items: stretch;
+  align-items: center;
+  text-align: start;
+  background: white;
+  height: 32px;
+  min-height: 32px;
+  border-bottom: 1px solid;
+  overflow: hidden;
+}
+
+.GridTableRow.Expanded{
+  height: auto;
+  min-height: 50px;
+}
+
+.GridTableBodyRow:hover {
+  background-color: lightcyan;
+  cursor: pointer;
+}
+
+.GridTableRow>* {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 5px;
+}
+
+.GridTableRow.Expanded>* {
+  overflow: visible;
+  white-space: normal;
+}
+
+.GridTableRow.EmptyPlaceHolder:hover {
+  background-color: initial;
+  cursor: default;
+}
+
+.GridTable>.GridTableHeaderRow {
+  position: sticky;
+  top: 0;
+  font-weight: bold;
+  height: 40px;
+}
+
+.FilterSection {
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.FilterSection > *{
+  margin-right: 10px;
+}
+
+.FilterSection > *:last-child{
+  margin-right: 0px;
+}
